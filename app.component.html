@@ -1,0 +1,30 @@
+<h1>Types of Binding in Angular</h1>
+
+
+<h5>Personal Details</h5>
+<p>{{bio.name}} {{bio.age}} </p>
+<p>Adding variables {{var1 + var2}}</p>
+<p>Dividing variables {{var1 / var2}}</p>
+
+
+<!-- <img [src]="imgName" [attr.width] ="imgWidth" alt=""/> -->
+
+<img src= {{imgName}} width=400 alt=""/>
+
+<br>
+
+<hr>
+
+<p>This would change the name attribute that we created from previous example</p>
+<button (click)="fun()"> click</button>
+
+<select id = "animals" (change) = "changeEvent()">
+    <option value="obj1">bird</option>
+    <option value="obj2">cat</option>
+    <option value="obj3">dog</option>
+</select>
+
+
+<h4 [class]="setClass1">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</h4>
+<h4 [class]="setClass2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</h4>
+<h4 [class]="setClass3">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</h4>
