@@ -1,0 +1,84 @@
+
+<h1>{{name | titlecase}} || {{name | reversestr | titlecase}}</h1>
+
+<h2>{{dateToday | date:'dd/MM/yyyy hh:mm:ss zz'}}</h2>
+
+<table border="3" [width]="tableWidth">
+    <tr>
+        <th>
+            Student
+        </th>
+        <th>
+            Date of Birth
+        </th>
+        <th>
+            Age
+        </th>
+    </tr>
+    <tr *ngFor="let student of classroom">
+        <td>
+            {{student.name}}
+        </td>
+        <td>
+            {{student.date}}
+        </td>
+        <td>
+            {{ student.date | age }}
+        </td>
+    </tr>
+
+
+</table>
+
+<br>
+<hr>
+<br>
+<table  border="1" [width]="tableWidth">
+    <tr>
+        <th>
+            Student
+        </th>
+        <th>
+            Maths
+        </th>
+        <th>
+            Science
+        </th>
+        <th>
+            Literature
+        </th>
+        <th>
+            Social Science
+        </th>
+        <th>
+            Total
+        </th>
+        <th>
+            Subject Percentage
+        </th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>
+            {{student.name}}
+        </td>
+        <td>
+            {{student.maths}}
+        </td>
+        <td>
+            {{ student.science}}
+        </td>
+        <td>
+            {{ student.literature}}
+        </td>
+        <td>
+            {{ student.socio}}
+        </td>
+
+        <td>
+            {{student.total}}
+        </td>   
+        <td>
+            {{ student.maths + student.science + student.literature + student.socio | percent: student.total}}
+        </td>
+    </tr>
+</table>
